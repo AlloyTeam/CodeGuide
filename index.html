@@ -1,0 +1,735 @@
+---
+layout: default
+---
+
+<a href="#top" id="toTop"></a>
+<div class="heading" id="toc">
+    <h2>Table of contents</h2>
+</div>
+<div class="section toc">
+    <div class="col">
+        <h4><a href="#html">Naming Project</a></h4>
+        <ul>
+            <li><a href="#project-naming">项目名</a></li>
+            <li><a href="#folder-naming">目录名</a></li>
+            <li><a href="#js-naming">JS文件命名</a></li>
+            <li><a href="#css-naming">CSS&SCSS文件命名</a></li>
+            <li><a href="#html-naming">HTML文件命名</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        <h4><a href="#html">HTML</a></h4>
+        <ul>
+            <li><a href="#html-syntax">语法</a></li>
+            <li><a href="#html-doctype">HTML5 doctype</a></li>
+            <li><a href="#html-lang">Language attribute</a></li>
+            <li><a href="#html-encoding">字符编码</a></li>
+            <li><a href="#html-ie-compatibility-mode">Internet Explorer
+                compatibility mode</a></li>
+            <li><a href="#html-style-script">引入 CSS 和 JavaScript</a></li>
+            <li><a href="#html-practicality">实用高于完美</a></li>
+            <li><a href="#html-attribute-order">属性顺序</a></li>
+            <li><a href="#html-boolean-attributes">Boolean 属性</a></li>
+            <li><a href="#html-reducing-markup">减少标签数量</a></li>
+            <li><a href="#html-javascript">JavaScript 生成标签</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        <h4><a href="#css">CSS</a></h4>
+        <ul>
+            <li><a href="#css-syntax">CSS 语法</a></li>
+            <li><a href="#css-declaration-order">声明顺序</a></li>
+            <li><a href="#css-import">Don't use @import</a></li>
+            <li><a href="#css-media-queries">Media query placement</a></li>
+            <li><a href="#css-prefixed-properties">前缀属性</a></li>
+            <li><a href="#css-single-declarations">Rules with single
+                declarations</a></li>
+            <li><a href="#css-shorthand">属性简写</a></li>
+            <li><a href="#css-nesting">Less 和 Sass 中的嵌套</a></li>
+            <li><a href="#css-comments">代码注释</a></li>
+            <li><a href="#css-classes">Class 命名</a></li>
+            <li><a href="#css-selectors">选择器</a></li>
+            <li><a href="#css-organization">代码组织</a></li>
+            <li><a href="http://cssguidelin.es/">Harry Roberts写的CSS最佳指引</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        <h4><a href="#javascript">JavaScript</a></h4>
+        <ul>
+            <li><a href="#js-indentation">Indentation,分号,单行长度</a></li>
+            <li><a href="#js-blank-lines">空行</a></li>
+            <li><a href="#js-variable-naming">变量命名</a></li>
+            <li><a href="#js-literal-value-string">字符常量</a></li>
+            <li><a href="#js-literal-value-null">null使用场景</a></li>
+            <li><a href="#js-literal-value-undefined">undefined使用场景</a></li>
+            <li><a href="#js-literal-value-object">Object Literals</a></li>
+            <li><a href="#js-literal-value-array">Array Literals</a></li>
+            <li><a href="#js-comments-single-line">单行注释</a></li>
+            <li><a href="#js-comments-multiline">多行注释</a></li>
+            <li><a href="#js-comments-documentation">文档注释</a></li>
+            <li><a href="#js-brace">括号对齐</a></li>
+            <li><a href="#js-if-else">if else</a></li>
+            <li><a href="#js-switch">switch</a></li>
+            <li><a href="#js-for">for</a></li>
+            <li><a href="#js-variable-declaration">变量声明</a></li>
+            <li><a href="#js-function-declaration">函数声明</a></li>
+            <li><a href="#js-miscellaneous">杂项</a></li>
+            <li><a href="https://github.com/airbnb/javascript" target="_blank">GitHub上更加大而全的JavaScript代码规范</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="section" id="golden-rule">
+  <div class="col">
+    <h2>Golden rule</h2>
+    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/materliu/code-guide/issues/new">open an issue on GitHub</a>.</p>
+  </div>
+  <div class="col">
+    <blockquote>
+      <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+    </blockquote>
+  </div>
+</div>
+
+<div class="section" id="project-naming">
+    <div class="col">
+        <h3>项目命名</h3>
+        <p>项目名全部采用小写方式， 以中划线分隔。 比如： my-project-name</p>
+    </div>
+</div>
+
+<div class="section" id="folder-naming">
+    <div class="col">
+        <h3>目录名</h3>
+        <p>目录名参照上一条规则,有复数结构时，要采用复数命名法，比如说： scripts, styles, images, data-models</p>
+    </div>
+</div>
+
+<div class="section" id="js-naming">
+    <div class="col">
+        <h3>JavaScript文件命名</h3>
+        <p>所有js文件名，多个单词组成时，采用中划线连接方式，比如说： 账号模型文件 account-model.js</p>
+    </div>
+</div>
+
+<div class="section" id="css-naming">
+    <div class="col">
+        <h3>CSS，SCSS文件命名</h3>
+        <p>多个单词组成时，采用中划线连接方式，比如说：retina-sprites.scss</p>
+    </div>
+</div>
+
+<div class="section" id="html-naming">
+    <div class="col">
+        <h3>HTML文件命名</h3>
+        <p>多个单词组成时，采用中划线连接方式，比如说: error-report.html</p>
+    </div>
+</div>
+
+
+
+<div class="heading" id="html">
+  <h2>HTML</h2>
+</div>
+
+<div class="section" id="html-syntax">
+    <div class="col">
+        <h3>语法</h3>
+        <ul>
+            <li>使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。</li>
+            <li>嵌套的节点应该缩进（四个空格）。</li>
+            <li>在属性上，使用双引号，不要使用单引号。</li>
+            <li>不要在自动闭合标签结尾处使用斜线 - <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 规范</a> 指出他们是可选的。</li>
+            <li>不要忽略可选的关闭标签（例如，<code>&lt;/li&gt;</code> 和 <code>&lt;/body&gt;</code>）。</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/syntax.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-doctype">
+    <div class="col">
+        <h3>HTML5 doctype</h3>
+        <p>在每个 HTML 页面开头使用这个简单地 doctype 来启用标准模式，使其每个浏览器中尽可能一致的展现。</p>
+        <p>虽然doctype不区分大小写，但是按照惯例，doctype大写 <a href="http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname" target="_blank">关于html属性，大写还是小写的一片文章</a></p>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-lang">
+  <div class="col">
+    <h3>Language attribute</h3>
+    <p>From the HTML5 spec:</p>
+    <blockquote>
+      <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+    </blockquote>
+    <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
+    <p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
+    <p>Sitepoint只是给出了语言代码的大类，比如说中文就只给出了ZH，但是没有区分香港，台湾，大陆等。而微软给出的一份细分了zh-cn,zh-hk,zh-tw, Head to Microsoft for a <a href="http://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx">detail list of language codes</a>.</p>
+  </div>
+  <div class="col">
+    {% highlight html %}{% include html/lang.html %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="html-ie-compatibility-mode">
+  <div class="col">
+    <h3>IE compatibility mode</h3>
+    <p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
+    <p>For more information, <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">read this awesome Stack Overflow article</a>.</p>
+      <p>不同doctype在不同浏览器下的不同渲染模式，诡异模式<a
+          href="https://hsivonen.fi/doctype/">总结的很到位</a>.</p>
+  </div>
+  <div class="col">
+    {% highlight html %}{% include html/ie-compatibility-mode.html %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="html-encoding">
+    <div class="col">
+        <h3>字符编码</h3>
+        <p>通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式。同时你也应该避免使用类似于&lt;这种字符Entities, 而使用他们的entity_code &#60;</p>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/encoding.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-style-script">
+    <div class="col">
+        <h3>引入 CSS 和 JavaScript</h3>
+        <p>根据 HTML5 规范, 通常在引入 CSS 和 JavaScript 时不需要指明 <code>type</code>，因为 <code>text/css</code> 和 <code>text/javascript</code> 分别是他们的默认值。</p>
+        <h4>HTML5 规范链接</h4>
+        <ul>
+            <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">使用 link</a></li>
+            <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">使用 style</a></li>
+            <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">使用 script</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/style-script.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-practicality">
+    <div class="col">
+        <h3>实用高于完美</h3>
+        <p>尽量遵循 HTML 标准和语义，但是不应该以浪费实用性作为代价。任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。</p>
+    </div>
+</div>
+
+<div class="section" id="html-attribute-order">
+    <div class="col">
+        <h3>属性顺序</h3>
+        <p>HTML 属性应该按照特定的顺序出现以保证易读性。</p>
+        <ul>
+            <li><code>class</code></li>
+            <li><code>id</code></li>
+            <li><code>name</code></li>
+            <li><code>data-*</code></li>
+            <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code> , <code>max-length</code>, <code>max</code>, <code>min</code>, <code>pattern</code></li>
+            <li><code>placeholder</code>, <code>title</code>, <code>alt</code></li>
+            <li><code>aria-*</code>, <code>role</code></li>
+            <li><code>required</code>, <code>readonly</code>, <code>disabled</code></li>
+        </ul>
+        <p>Classes 是为高可复用组件设计的，理论上他们应处在第一位。Ids 更加具体而且应该尽量少使用（例如, 页内书签），所以他们处在第二位。</p>
+
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-boolean-attributes">
+    <div class="col">
+        <h3>Boolean 属性</h3>
+        <p>Boolean 属性指不需要声明取值的属性。XHTML 需要每个属性声明取值，但是 HTML5 并不需要。</p>
+        <p>了解更多内容，参考 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
+        <blockquote>
+            <p>一个元素中 Boolean 属性的存在表示取值 true，不存在则表示取值 false。</p>
+        </blockquote>
+        <p>如果你<em>必须</em>为属性添加<strong>并不需要的</strong>取值，参照 WhatWG 的指引:</p>
+        <blockquote>
+            <p>如果属性存在，他的取值必须是空字符串或者 [...] 属性的规范名称，不要在首尾包含空白字符。</p>
+        </blockquote>
+        <p><strong>简而言之，不要为 Boolean 属性添加取值。</strong></p>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/boolean-attributes.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-reducing-markup">
+    <div class="col">
+        <h3>减少标签数量</h3>
+        <p>在编写 HTML 代码时，需要尽量避免多余的父节点。很多时候，需要通过迭代和重构来使 HTML 变得更少。 参考下面的示例:</p>
+    </div>
+    <div class="col">
+        {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="html-javascript">
+    <div class="col">
+        <h3>JavaScript 生成标签</h3>
+        <p>在 JavaScript 文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。</p>
+    </div>
+</div>
+
+
+
+<div class="heading" id="css">
+  <h2>CSS</h2>
+</div>
+
+<div class="section" id="css-syntax">
+    <div class="col">
+        <h3>语法</h3>
+        <ul>
+            <li>使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。</li>
+            <li>使用组合选择器时，保持每个独立的选择器占用一行。</li>
+            <li>为了代码的易读性，在每个声明的左括号前增加一个空格。</li>
+            <li>声明块的右括号应该另起一行。</li>
+            <li>每条声明 <code>:</code> 后应该插入一个空格。</li>
+            <li>每条声明应该只占用一行来保证错误报告更加准确。</li>
+            <li>所有声明应该以分号结尾。虽然最后一条声明后的分号是可选的，但是如果没有他，你的代码会更容易出错。</li>
+            <li>逗号分隔的取值，都应该在逗号之后增加一个空格。比如说box-shadow</li>
+            <li>不要在颜色值 <code>rgb()</code> <code>rgba()</code> <code>hsl()</code> <code>hsla()</code>和 <code>rect()</code> <em>中</em>增加空格，并且不要带有取值前面不必要的 0 (比如，使用 .5 替代 0.5)。This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
+            <li>所有的十六进制值都应该使用小写字母，例如 <code>#fff</code>。因为小写字母有更多样的外形，在浏览文档时，他们能够更轻松的被区分开来。</li>
+            <li>尽可能使用短的十六进制数值，例如使用 <code>#fff</code> 替代 <code>#ffffff</code>。</li>
+            <li>为选择器中的属性取值添加引号，例如 <code>input[type="text"]</code>。 <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">他们只在某些情况下可有可无</a>，所以都使用引号可以增加一致性。</li>
+            <li>不要为 0 指明单位，比如使用 <code>margin: 0;</code> 而不是 <code>margin: 0px;</code>。</li>
+        </ul>
+        <p>对这里提到的规则有问题吗？参考 Wikipedia 中的<a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax"> CSS 语法部分</a>。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-declaration-order">
+    <div class="col">
+        <h3>声明顺序</h3>
+        <p>相关的属性声明应该以下面的顺序分组处理：</p>
+        <ol>
+            <li>Positioning</li>
+            <li>Box model 盒模型</li>
+            <li>Typographic 排版</li>
+            <li>Visual 外观</li>
+        </ol>
+        <p>Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。盒模型紧跟其后，因为他决定了一个组件的大小和位置。</p>
+        <p>其他属性只在组件 <em>内部</em> 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。</p>
+        <p>关于完整的属性以及他们的顺序，请参考 <a href="http://twitter.github.com/recess">Recess</a>。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
+        {% highlight javascript %}{% include css/declaration-order.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-import">
+  <div class="col">
+    <h3>Don't use <code>@import</code></h3>
+    <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
+    <ul>
+      <li>Use multiple <code>&lt;link&gt;</code> elements</li>
+      <li>Compile your CSS with a preprocessor like Sass or Less into a single file</li>
+      <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
+    </ul>
+    <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+  </div>
+  <div class="col">
+    {% highlight html %}{% include css/import.html %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="css-media-queries">
+    <div class="col">
+        <h3>媒体查询位置</h3>
+        <p>尽量将媒体查询的位置靠近他们相关的规则。不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部。这样做只会让大家以后更容易忘记他们。这里是一个典型的案例。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-prefixed-properties">
+    <div class="col">
+        <h3>前缀属性</h3>
+        <p>当使用厂商前缀属性时，通过缩进使取值垂直对齐以便多行编辑。</p>
+        <p>在 Textmate 中，使用 <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A)。 在 Sublime Text 2 中， 使用 <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) 和 <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;)。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-single-declarations">
+    <div class="col">
+        <h3>单条声明的声明块</h3>
+        <p>在一个声明块中<strong>只包含一条声明</strong>的情况下，为了易读性和快速编辑可以考虑移除其中的换行。所有包含多条声明的声明块应该分为多行。</p>
+        <p>这样做的关键因素是错误检测 - 例如，一个 CSS 验证程序显示你在 183 行有一个语法错误,如果是一个单条声明的行，那就是他了。在多个声明的情况下，你必须为哪里出错了费下脑子。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-shorthand">
+    <div class="col">
+        <h3>属性简写</h3>
+        <p>坚持限制属性取值简写的使用，属性简写需要你必须显式设置所有取值。常见的属性简写滥用包括:</p>
+        <ul>
+            <li><code>padding</code></li>
+            <li><code>margin</code></li>
+            <li><code>font</code></li>
+            <li><code>background</code></li>
+            <li><code>border</code></li>
+            <li><code>border-radius</code></li>
+        </ul>
+        <p>大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。</p>
+        <p>Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> 的文章。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-nesting">
+    <div class="col">
+        <h3>Less 和 Sass 中的嵌套</h3>
+        <p>避免不必要的嵌套。可以进行嵌套，不意味着你应该这样做。只有在需要给父元素增加样式并且同时存在多个子元素时才需要考虑嵌套。</p>
+    </div>
+    <div class="col">
+        {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-comments">
+    <div class="col">
+        <h3>代码注释</h3>
+        <p>代码是由人来编写和维护的。保证你的代码是描述性的，包含好的注释，并且容易被他人理解。好的代码注释传达上下文和目标。不要简单地重申组件或者 class 名称。</p>
+        <p>Be sure to write in complete sentences or larger comments and succinct phrases for general notes.</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/comments.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-classes">
+    <div class="col">
+        <h3>Class 命名</h3>
+        <ul>
+            <li>保持 Class 命名为全小写，可以使用短划线（不要使用下划线和 camelCase 命名）。短划线应该作为相关类的自然间断。(例如，<code>.btn</code> 和 <code>.btn-danger</code>)。</li>
+            <li>避免过度使用简写。<code>.btn</code> 可以很好地描述 <em>button</em>，但是 <code>.s</code> 不能代表任何元素。</li>
+            <li>Class 的命名应该尽量短，也要尽量明确。</li>
+            <li>使用有意义的名称；使用结构化或者作用目标相关，而不是抽象的名称。</li>
+            <li>命名时使用最近的父节点或者父 class 作为前缀。</li>
+            <li>使用 <code>.js-*</code> classes 来表示行为(相对于样式)，但是不要在 CSS 中包含这些 classes。</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-selectors">
+    <div class="col">
+        <h3>选择器</h3>
+        <ul>
+            <li>使用 classes 而不是通用元素标签来优化渲染性能。</li>
+            <li>避免在经常出现的组件中使用一些属性选择器 (例如，<code>[class^="..."]</code>)。浏览器性能会受到这些情况的影响。</li>
+            <li>减少选择器的长度，每个组合选择器选择器的条目应该尽量控制在 3 个以内。</li>
+            <li><strong>只</strong>在必要的情况下使用后代选择器 (例如，没有使用带前缀 classes 的情况).</li>
+        </ul>
+        <p>扩展阅读:</p>
+        <ul>
+            <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
+            <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/selectors.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-organization">
+    <div class="col">
+        <h3>代码组织</h3>
+        <ul>
+            <li>以组件为单位组织代码。</li>
+            <li>制定一个一致的注释层级结构。</li>
+            <li>使用一致的空白来分割代码块，这样做在查看大的文档时更有优势。</li>
+            <li>当使用多个 CSS 文件时，通过组件而不是页面来区分他们。页面会被重新排列，而组件移动就可以了。</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-editor-prefs">
+    <div class="col">
+        <h3>编辑器配置</h3>
+        <p>根据以下的设置来配置你的编辑器，来避免常见的代码不一致和丑陋的 diffs。</p>
+        <ul>
+            <li>使用四个空格的 soft-tabs。</li>
+            <li>在保存时删除尾部的空白字符。</li>
+            <li>在保存时删除尾部的空白字符。 <a href="http://programmers.stackexchange.com/questions/121555/why-is-trailing-whitespace-a-big-deal" target="_blank">为什么这么做？</a></li>
+            <li>设置文件编码为 UTF-8。</li>
+            <li>在文件结尾添加一个空白行。</li>
+            <li>在文件结尾添加一个空白行。<a href="http://www.zhihu.com/question/20018991" target="_blank">为什么这么做？</a></li>
+        </ul>
+        <p>参照文档，将这些设置应用到项目的 <code>.editorconfig</code> 文件。 例如，<a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">Bootstrap 中的 <code>.editorconfig</code> 文件</a>。 通过 <a href="http://editorconfig.org">关于 EditorConfig</a> 了解更多内容。</p>
+    </div>
+</div>
+
+<div class="heading" id="JavaScript">
+    <h2>JavaScript</h2>
+</div>
+
+<div class="section" id="js-indentation">
+    <div class="col">
+        <h3>Indentation,分号,单行长度</h3>
+        <ul>
+            <li>一律使用4个空格</li>
+            <li>continuation-indentation 同样适用4个空格，跟上一行对齐</li>
+            <li>Statement 之后一律以分号结束， 不可以省略</li>
+            <li>单行长度，理论上不要超过80列，不过如果编辑器开启 soft wrap 的话可以不考虑单行长度</li>
+            <li>接上一条，如果需要换行，存在操作符的情况，一定在操作符后换行，然后换的行缩进4个空格</li>
+            <li>这里要注意，如果是多次换行的话就没有必要继续缩进了，比如说右边第二段这种就是最佳格式。</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-indentation.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-blank-lines">
+    <div class="col">
+        <h3>空行</h3>
+        <ul>
+            <li>方法之间加</li>
+            <li>单行或多行注释前加</li>
+            <li>逻辑块之间加空行增加可读性</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section" id="js-variable-naming">
+    <div class="col">
+        <h3>变量命名</h3>
+        <ul>
+            <li>标准变量采用驼峰标识</li>
+            <li>使用的ID的地方一定全大写</li>
+            <li>使用的URL的地方一定全大写, 比如说 reportURL</li>
+            <li>涉及Android的，一律大写第一个字母</li>
+            <li>涉及iOS的，一律小写第一个，大写后两个字母</li>
+            <li>常量采用大写字母，下划线连接的方式</li>
+            <li>构造函数，大写第一个字母</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-variable-naming.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-string">
+    <div class="col">
+        <h3>字符常量</h3>
+        <ul>
+            <li>一般情况下统一使用 '' 单引号</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-null">
+    <div class="col">
+        <h3>null的使用场景</h3>
+        <ul>
+            <li>To initialize a variable that may later be assigned an object value</li>
+            <li>To compare against an initialized variable that may or may not have an object value</li>
+            <li>To pass into a function where an object is expected</li>
+            <li>To return from a function where an object is expected</li>
+        </ul>
+        <h3>不适合null的使用场景</h3>
+        <ul>
+            <li>Do not use null to test whether an argument was supplied</li>
+            <li>Do not test an uninitialized variable for the value null</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-undefined">
+    <div class="col">
+        <h3>undefined使用场景</h3>
+        <ul>
+            <li>永远不要直接使用undefined进行变量判断</li>
+            <li>使用字符串 "undefined" 对变量进行判断</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-literal-value-undefined.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-object">
+    <div class="col">
+        <h3>Object Literals</h3>
+        {% highlight javascript %}{% include javascripts/js-literal-value-object.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-array">
+    <div class="col">
+        <h3>Array Literals</h3>
+        {% highlight javascript %}{% include javascripts/js-literal-value-array.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-single-line">
+    <div class="col">
+        <h3>单行注释</h3>
+        <ul>
+            <li>双斜线后，必须跟注释内容保留一个空格</li>
+            <li>可独占一行, 前边不许有空行, 缩进与下一行代码保持一致</li>
+            <li>可位于一个代码行的末尾，注意这里的格式</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-comments-single-line.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-multiline">
+    <div class="col">
+        <h3>多行注释格式</h3>
+        <ul>
+            <li>最少三行, 格式如右</li>
+            <li>前边留空一行</li>
+        </ul>
+        <h3>何时使用</h3>
+        <ul>
+            <li>难于理解的代码段</li>
+            <li>可能存在错误的代码段</li>
+            <li>浏览器特殊的HACK代码</li>
+            <li>想吐槽的产品逻辑, 合作同事</li>
+            <li>业务逻辑强相关的代码</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-comments-multiline.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-documentation">
+    <div class="col">
+        <h3>文档注释</h3>
+        <ul>
+            <li>各类标签 @param @method 等 参考 <a href="http://usejsdoc.org/" target="_blank">http://usejsdoc.org/</a></li>
+            <li>格式如右</li>
+        </ul>
+        <h3>用在哪里</h3>
+        <ul>
+            <li>All methods</li>
+            <li>All constructors</li>
+            <li>All objects with documented methods</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-comments-documentation.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-brace">
+    <div class="col">
+        <h3>括号对齐</h3>
+        <ul>
+            <li>标准示例 括号前后有空格， 花括号起始 不另换行，结尾新起一行</li>
+            <li>花括号必须要， 即使内容只有一行， 决不允许右边第二种情况</li>
+            <li>涉及 if for while do...while try...catch...finally 的地方都必须使用花括号</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-brace.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-if-else">
+    <div class="col">
+        <h3>if else else前后留有空格</h3>
+        <div class="col">
+            {% highlight javascript %}{% include javascripts/js-if-else.js %}{% endhighlight %}
+        </div>
+    </div>
+</div>
+
+<div class="section" id="js-switch">
+    <div class="col">
+        <h3>switch</h3>
+        <ul>
+            <li>采用右边的格式， switch和括号之间有空格， case需要缩进， break之后跟下一个case中间留一个blank line</li>
+            <li>花括号必须要， 即使内容只有一行。</li>
+            <li> 如右侧第二种情况，switch 的 falling through 一定要有注释特别说明， no default 的情况也需要注释特别说明况</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-switch.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-for">
+    <div class="col">
+        <h3>for</h3>
+        <ul>
+            <li>普通for循环, 分号后留有一个空格， 判断条件等内的操作符两边不留空格， 前置条件如果有多个，逗号后留一个空格</li>
+            <li>for-in 一定要有 hasOwnProperty 的判断， 否则 JSLint 或者 JSHint 都会有一个 warn</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-for.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-variable-declaration">
+    <div class="col">
+        <h3>变量声明</h3>
+        <ul>
+            <li>所有函数内变量声明放在函数内头部，只使用一个 var(多了JSLint报错)， 一个变量一行， 在行末跟注释， 注释啊，注释啊，亲</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-variable-declaration.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-function-declaration">
+    <div class="col">
+        <h3>函数声明</h3>
+        <ul>
+            <li>一定先声明再使用， 不要利用 JavaScript engine的hoist特性, 违反了这个规则 JSLint 和 JSHint都会报 warn</li>
+            <li>function declaration 和 function expression 的不同，function expression 的（）前后必须有空格，而function declaration 在有函数名的时候不需要空格， 没有函数名的时候需要空格。</li>
+            <li>函数调用括号前后不需要空格</li>
+            <li>立即执行函数的写法, 最外层必须包一层括号</li>
+            <li>"use strict" 决不允许全局使用， 必须放在函数的第一行， 可以用自执行函数包含大的代码段, 如果 "use strict" 在函数外使用， JSLint 和 JSHint 均会报错</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/js-function-declaration.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-miscellaneous">
+    <div class="col">
+        <h3>杂项</h3>
+        <ul>
+            <li>完全避免 == != 的使用， 用严格比较条件 ===  !==</li>
+            <li>eval 非特殊业务， 禁用！！！</li>
+            <li>with 非特殊业务， 禁用！！！</li>
+        </ul>
+    </div>
+</div>
