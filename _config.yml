@@ -1,0 +1,7 @@
+name:          Code Guide by @AlloyTeam-materliu
+description:   Standards for developing flexible, durable, and sustainable HTML and CSS, and maintainable JavaScript
+url:           http://materliu.github.io/code-guide/
+
+markdown:      rdiscount
+permalink:     pretty
+pygments:      true
