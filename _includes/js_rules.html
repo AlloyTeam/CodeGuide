@@ -1,0 +1,300 @@
+<div class="heading" id="javascript">
+    <h2>JavaScript</h2>
+</div>
+
+<div class="section" id="js-indentation">
+    <div class="col">
+        <h3>缩进</h3>
+        <p>使用soft tab（4个空格）。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/indentation.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-line-max-length">
+    <div class="col">
+        <h3>单行长度</h3>
+        <p>不要超过80，但如果编辑器开启word wrap可以不考虑单行长度。</p>
+    </div>
+</div>
+
+<div class="section" id="js-semicolon">
+    <div class="col">
+        <h3>分号</h3>
+        <p>以下几种情况后需加分号：</p>
+        <ul>
+            <li>变量声明</li>
+            <li>表达式</li>
+            <li>return</li>
+            <li>throw</li>
+            <li>break</li>
+            <li>continue</li>
+            <li>do-while</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/semicolon.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-space">
+    <div class="col">
+        <h3>空格</h3>
+        <p>以下几种情况不需要空格：</p>
+        <ul>
+            <li>对象的属性名后</li>
+            <li>前缀一元运算符后</li>
+            <li>后缀一元运算符前</li>
+            <li>函数调用括号前</li>
+            <li>无论是函数声明还是函数表达式，'('前不要空格</li>
+            <li>数组的'['后和']'前</li>
+            <li>对象的'{'后和'}'前</li>
+            <li>运算符'('后和')'前</li>
+        </ul>
+        <p>以下几种情况需要空格：</p>
+        <ul>
+            <li>二元运算符前后</li>
+            <li>三元运算符'?:'前后</li>
+            <li>代码块'{'前</li>
+            <li>下列关键字前：<code>else</code>, <code>while</code>, <code>catch</code>, <code>finally</code></li>
+            <li>下列关键字后：<code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, <code>do</code>, <code>switch</code>, <code>case</code>, <code>try</code>, <code>catch</code>, <code>finally</code>, <code>with</code>, <code>return</code>, <code>typeof</code></li>
+            <li>单行注释'//'后（若单行注释和代码同行，则'//'前也需要），多行注释'*'后</li>
+            <li>对象的属性值前</li>
+            <li>for循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格</li>
+            <li>无论是函数声明还是函数表达式，'{'前一定要有空格</li>
+            <li>函数的参数之间</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/space.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-blank-line">
+    <div class="col">
+        <h3>空行</h3>
+        <p>以下几种情况需要空行：</p>
+        <ul>
+            <li>变量声明后（当变量声明在代码块的最后一行时，则无需空行）</li>
+            <li>注释前（当注释在代码块的第一行时，则无需空行）</li>
+            <li>代码块后（在函数调用、数组、对象中则无需空行）</li>
+            <li>文件最后保留一个空行</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/blank_line.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-new-line">
+    <div class="col">
+        <h3>换行</h3>
+        <p>换行的地方，行末必须有','或者运算符；</p>
+        <p>以下几种情况不需要换行：</p>
+        <ul>
+            <li>下列关键字后：<code>else</code>, <code>catch</code>, <code>finally</code></li></li>
+            <li>代码块'{'前</li>
+        </ul>
+        <p>以下几种情况需要换行：</p>
+        <ul>
+            <li>代码块'{'后和'}'前</li>
+            <li>变量赋值后</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/new_line.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-single-line">
+    <div class="col">
+        <h3>单行注释</h3>
+        <p>双斜线后，必须跟一个空格；</p>
+        <p>缩进与下一行代码保持一致；</p>
+        <p>可位于一个代码行的末尾，与代码间隔一个空格。</li>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/comments_single_line.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-multiline">
+    <div class="col">
+        <h3>多行注释</h3>
+        <p>最少三行, '*'后跟一个空格，具体参照右边的写法；</p>
+        <p>建议在以下情况下使用：</h3>
+        <ul>
+            <li>难于理解的代码段</li>
+            <li>可能存在错误的代码段</li>
+            <li>浏览器特殊的HACK代码</li>
+            <li>业务逻辑强相关的代码</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/comments_multiline.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-comments-documentation">
+    <div class="col">
+        <h3>文档注释</h3>
+        <p>各类标签@param, @method等请参考<a href="http://usejsdoc.org/" target="_blank">usejsdoc</a>和<a href="http://yuri4ever.github.io/jsdoc/" target="_blank">JSDoc Guide</a>；</p>
+        <p>建议在以下情况下使用：</p>
+        <ul>
+            <li>所有常量</li>
+            <li>所有函数</li>
+            <li>所有类</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/comments_documentation.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-quote-marks">
+    <div class="col">
+        <h3>引号</h3>
+        <p>最外层统一使用单引号。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/quote_marks.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-variable-naming">
+    <div class="col">
+        <h3>变量命名</h3>
+        <ul>
+            <li>标准变量采用驼峰标识（除了对象的属性外，主要是考虑到cgi返回的数据）</li>
+            <li>'ID'在变量名中全大写</li>
+            <li>'URL'在变量名中全大写</li>
+            <li>'Android'在变量名中大写第一个字母</li>
+            <li>'iOS'在变量名中小写第一个，大写后两个字母</li>
+            <li>常量全大写，用下划线连接</li>
+            <li>构造函数，大写第一个字母</li>
+            <li>jquery对象必须以'$'开头命名</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/variable_naming.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-variable-declaration">
+    <div class="col">
+        <h3>变量声明</h3>
+        <p>一个函数作用域中所有的变量声明提到函数首部（包括for语句中经常声明的i, j），用一个var声明。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/variable_declaration.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-function">
+    <div class="col">
+        <h3>函数</h3>
+        <p>无论是函数声明还是函数表达式，'('前不要空格，但'{'前一定要有空格；</p>
+        <p>函数调用括号前不需要空格；</p>
+        <p>立即执行函数外必须包一层括号；</p>
+        <p>不要给inline function命名；</p>
+        <p>参数之间用', '分隔，注意逗号后有一个空格。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/function.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-array-object">
+    <div class="col">
+        <h3>数组、对象</h3>
+        <p>对象属性名不需要加引号；</p>
+        <p>对象以缩进的形式书写，不要写在一行；</p>
+        <p>数组、对象最后不要有逗号。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/array_object.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-brace">
+    <div class="col">
+        <h3>括号</h3>
+        <p>下列关键字后必须有大括号（即使代码块的内容只有一行）：<code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, <code>do</code>, <code>switch</code>, <code>try</code>, <code>catch</code>, <code>finally</code>, <code>with</code></li>。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/brace.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-null">
+    <div class="col">
+        <h3>null</h3>
+        <p>适用场景：</p>
+        <ul>
+            <li>初始化一个将来可能被赋值为对象的变量</li>
+            <li>与已经初始化的变量做比较</li>
+            <li>作为一个参数为对象的函数的调用传参</li>
+            <li>作为一个返回对象的函数的返回值</li>
+        </ul>
+        <p>不适用场景：</p>
+        <ul>
+            <li>不要用null来判断函数调用时有无传参</li>
+            <li>不要与未初始化的变量做比较</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/literal_value_null.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-literal-value-undefined">
+    <div class="col">
+        <h3>undefined</h3>
+        <p>永远不要直接使用undefined进行变量判断；</p>
+        <p>使用typeof和字符串'undefined'对变量进行判断。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/literal_value_undefined.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-jshint">
+    <div class="col">
+        <h3>jshint</h3>
+        <p>用'===', '!=='代替'==', '!='；</p>
+        <p>for-in里一定要有hasOwnProperty的判断；</p>
+        <p>不要在内置对象的原型上添加方法，如Array, Date；</p>
+        <p>变量不要先使用后声明；</p>
+        <p>不要在一句代码中单单使用构造函数，记得将其赋值给某个变量；</p>
+        <p>不要在内层作用域的代码里声明了变量，之后却访问到了外层作用域的同名变量；</p>
+        <p>不要在同个作用域下声明同名变量；</p>
+        <p>不要在一些不需要的地方加括号，例：delete(a.b)；</p>
+        <p>不要使用未声明的变量（全局变量需要加到.jshintrc文件的globals属性里面）；</p>
+        <p>不要声明了变量却不使用；</p>
+        <p>不要在应该做比较的地方做赋值；</p>
+        <p>debugger不要出现在提交的代码里；</p>
+        <p>数组中不要存在空元素；</p>
+        <p>不要在循环内部声明函数；</p>
+        <p>不要像这样使用构造函数，例：<code>new function () { ... }</code>, <code>new Object</code>；</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/jshint.js %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="js-miscellaneous">
+    <div class="col">
+        <h3>杂项</h3>
+        <p>不要混用tab和space；</p>
+        <p>不要在一处使用多个tab或space；</p>
+        <p>换行符统一用'LF'；</p>
+        <p>对上下文this的引用只能使用'_this', 'that', 'self'其中一个来命名；</p>
+        <p>行尾不要有空白字符；</p>
+        <p>switch的falling through和no default的情况一定要有注释特别说明；</p>
+        <p>不允许有空的代码块。</p>
+    </div>
+    <div class="col">
+        {% highlight javascript %}{% include javascripts/miscellaneous.js %}{% endhighlight %}
+    </div>
+</div>

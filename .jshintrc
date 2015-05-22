@@ -1,0 +1,29 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "globals": {
+
+    },
+    "latedef": true,
+    "maxerr": 200,
+    "nonew": true,
+    "shadow": "inner",
+    "singleGroups": true,
+    "undef": true,
+    "unused": true,
+
+    "evil": true,
+    "expr": true,
+    "proto": true,
+    "scripturl": true,
+    "sub": true,
+
+    "browser": true,
+    "devel": true,
+    "jquery": true,
+    "nonstandard": true,
+    "typed": true,
+    "worker": true
+}
