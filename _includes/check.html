@@ -1,0 +1,111 @@
+<div class="heading" id="check">
+  <h2>编辑器配置和构建检查</h2>
+</div>
+
+<div class="section" id="check-sublime3">
+    <div class="col">
+        <h3>sublime3插件</h3>
+        <ol>
+            <li>
+                <p>安装node包</p>
+                <ul>
+                    <li>jscs <code>npm install jscs -g</code></li>
+                    <li>jscs <code>npm install jshint -g</code></li>
+                    <li>jscs <code>npm install csscomb -g</code></li>
+                </ul>
+            </li>
+            <li>
+                <p>安装sublime3 <a href="https://packagecontrol.io/installation#st3">Package Control</a></p>
+                <ul>
+                    <li>按下 <code>ctrl+`</code></li>
+                    <li>复制粘贴以下代码 <code>import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</code></li>
+                </ul>
+            </li>
+            <li>
+                <p>安装sublime3插件</p>
+                <ul>
+                    <li>按下 <code>ctrl+shift+p</code>，输入'ip'（Install Package）</li>
+                    <li>
+                        <p>输入以下插件的名字，按顺序逐个进行安装：</p>
+                        <ul style="list-style: circle;">
+                            <li><code>EditorConfig</code></li>
+                            <li><code>SublimeLinter</code></li>
+                            <li><code>SublimeLinter-jscs</code></li>
+                            <li><code>SublimeLinter-jshint</code></li>
+                            <li><code>JSFormat</code></li>
+                            <li><code>CSScomb</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>插件的配置文件</p>
+                <p>将以下配置文件分别下载后放入项目根目录下：</p>
+                <ul>
+                    <li><code>EditorConfig</code> <a href=".editorconfig" download=".editorconfig">配置文件</a></li>
+                    <li><code>JSCS</code> <a href=".jscsrc" download=".jscsrc">配置文件</a></li>
+                    <li><code>JSHint</code> <a href=".jshintrc" download=".jshintrc">配置文件</a></li>
+                </ul>
+            </li>
+            <li>
+                <p>编辑器及插件设置</p>
+                <ul>
+                    <li>
+                        <p><code>sublime3</code> 自身</p>
+                        <p>Preferences->Setting-User，增加下面两个配置：</p>
+                        {% highlight json %}{% include check/sublime_setting_user.json %}{% endhighlight %}
+                        <p>点击右下角的Spaces->Convert Indentation to Spaces可以将文件中的所有tab转换成空格</p>
+                    </li>
+                    <li>
+                        <p><code>JSFormat</code></p>
+                        <p>Preferences->Package Settings->JSFormat->Setting-User，下载<a href="jsformat_setting_user.json" download="jsformat_setting_user.json">配置文件</a>覆盖</p>
+                        <p>配置好后格式化的默认快捷键是 <code>ctrl+alt+f</code></p>
+                    </li>
+                    <li>
+                        <p><code>SublimeLinter</code></p>
+                        <p>右键->SublimeLinter->Lint Mode，有4种检查模式，建议选择 <code>Load/save</code></p>
+                        <p>右键->SublimeLinter->Mark Style，建议选择 <code>Outline</code></p>
+                        <p>右键->SublimeLinter->Choose Gutter Theme，建议选择 <code>Blueberry-round</code></p>
+                        <p>右键->SublimeLinter->Show Errors on Save</p>
+                        <p>右键->SublimeLinter->Open User Settings，将linter里面jscs的args改成 <code>["--verbose"]</code></p>
+                        <p>当光标处于有错误的代码行时，详细的错误信息会显示在下面的状态栏中</p>
+                        <p>右键->SublimeLinter可以看到所有的快捷键，其中 <code>ctrl+k, a</code> 可以列出所有错误</p>
+                    </li>
+                    <li>
+                        <p><code>CSScomb</code></p>
+                        <p>Preferences->Package Settings->CSScomb->Setting-User，下载<a href="csscomb_setting_user.json" download="csscomb_setting_user.json">配置文件</a>覆盖</p>
+                        <p>配置好后格式化的默认快捷键是 <code>ctrl+alt+c</code></p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="section" id="check-grunt">
+    <div class="col">
+        <h3>grunt插件</h3>
+        <ol>
+            <li>
+                <p>在项目中安装grunt插件</p>
+                <ul>
+                    <li>jscs <code>npm install grunt-jscs --save-dev</code></li>
+                    <li>jshint <code>npm install grunt-contrib-jshint --save-dev</code></li>
+                </ul>
+            </li>
+            <li>
+                <p>插件的配置文件</p>
+                <ul>
+                    <li>
+                        <code>JSCS</code>
+                        {% highlight javascript %}{% include check/grunt_jscs.js %}{% endhighlight %}
+                    </li>
+                    <li>
+                        <code>JSHint</code>
+                        {% highlight javascript %}{% include check/grunt_jshint.js %}{% endhighlight %}
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>

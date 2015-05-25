@@ -119,8 +119,13 @@ blockquote p {
     margin-bottom: 0;
 }
 
-ul li {
+ul li,
+ol li {
     margin-bottom: .25rem;
+}
+
+ul {
+    list-style-type: disc;
 }
 
 /* Tighten up margin on last items */
@@ -186,7 +191,7 @@ pre code {
     padding: 2rem 1rem;
 }
 .col p {
-    max-width: 40rem;
+    max-width: 45rem;
 }
 .col + .col {
     border-top: 1px solid #dfe1e8;

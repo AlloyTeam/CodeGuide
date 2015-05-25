@@ -2,6 +2,8 @@ name:          Code Guide by @AlloyTeam
 description:   Standards for developing flexible, durable, and sustainable HTML and CSS, and maintainable JavaScript
 url:           https://github.com/AlloyTeam/CodeGuide
 
+include:       [".editorconfig", ".jscsrc", ".jshintrc"]
+
 markdown:      rdiscount
 permalink:     pretty
 pygments:      true
