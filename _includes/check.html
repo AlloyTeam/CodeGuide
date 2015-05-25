@@ -44,7 +44,11 @@
                 <ul>
                     <li><code>EditorConfig</code> <a href=".editorconfig" download=".editorconfig">配置文件</a></li>
                     <li><code>JSCS</code> <a href=".jscsrc" download=".jscsrc">配置文件</a></li>
-                    <li><code>JSHint</code> <a href=".jshintrc" download=".jshintrc">配置文件</a></li>
+                    <li>
+                        <code>JSHint</code> <a href=".jshintrc" download=".jshintrc">配置文件</a>
+                        <p>注意：全局变量需要手动加到配置文件的globals属性里，例：</p>
+                        {% highlight json %}{% include check/grunt_jscs_globals.json %}{% endhighlight %}
+                    </li>
                 </ul>
             </li>
             <li>
