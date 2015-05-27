@@ -1,16 +1,12 @@
-/* Bad example */
+/* not good */
 .element {
-    margin: 0 0 10px;
-    background: red;
-    background: url("image.jpg");
-    border-radius: 3px 3px 0 0;
+    transition: opacity 1s linear 2s;
 }
 
-/* Good example */
+/* good */
 .element {
-    margin-bottom: 10px;
-    background-color: red;
-    background-image: url("image.jpg");
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    transition-delay: 2s;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-property: opacity;
 }

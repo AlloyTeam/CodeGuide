@@ -1,0 +1,23 @@
+/* not good */
+.element {
+    ...
+}
+.dialog {
+    color: red;
+    &:after {
+        ...
+    }
+}
+
+/* good */
+.element {
+    ...
+}
+
+.dialog {
+    color: red;
+
+    &:after {
+        ...
+    }
+}

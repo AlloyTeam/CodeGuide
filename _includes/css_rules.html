@@ -1,45 +1,130 @@
 <div class="heading" id="css">
-  <h2>CSS</h2>
+    <h2>CSS, SCSS</h2>
 </div>
 
-<div class="section" id="css-syntax">
+<div class="section" id="css-indentation">
     <div class="col">
-        <h3>语法</h3>
-        <ul>
-            <li>使用四个空格的 soft tabs — 这是保证代码在各种环境下显示一致的唯一方式。</li>
-            <li>使用组合选择器时，保持每个独立的选择器占用一行。</li>
-            <li>为了代码的易读性，在每个声明的左括号前增加一个空格。</li>
-            <li>声明块的右括号应该另起一行。</li>
-            <li>每条声明 <code>:</code> 后应该插入一个空格。</li>
-            <li>每条声明应该只占用一行来保证错误报告更加准确。</li>
-            <li>所有声明应该以分号结尾。虽然最后一条声明后的分号是可选的，但是如果没有他，你的代码会更容易出错。</li>
-            <li>逗号分隔的取值，都应该在逗号之后增加一个空格。比如说box-shadow</li>
-            <li>不要在颜色值 <code>rgb()</code> <code>rgba()</code> <code>hsl()</code> <code>hsla()</code>和 <code>rect()</code> <em>中</em>增加空格，并且不要带有取值前面不必要的 0 (比如，使用 .5 替代 0.5)。This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-            <li>所有的十六进制值都应该使用小写字母，例如 <code>#fff</code>。因为小写字母有更多样的外形，在浏览文档时，他们能够更轻松的被区分开来。</li>
-            <li>尽可能使用短的十六进制数值，例如使用 <code>#fff</code> 替代 <code>#ffffff</code>。</li>
-            <li>为选择器中的属性取值添加引号，例如 <code>input[type="text"]</code>。 <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">他们只在某些情况下可有可无</a>，所以都使用引号可以增加一致性。</li>
-            <li>不要为 0 指明单位，比如使用 <code>margin: 0;</code> 而不是 <code>margin: 0px;</code>。</li>
-        </ul>
-        <p>对这里提到的规则有问题吗？参考 Wikipedia 中的<a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax"> CSS 语法部分</a>。</p>
+        <h3>缩进</h3>
+        <p>使用soft tab（4个空格）。</p>
     </div>
     <div class="col">
-        {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
+        {% highlight css %}{% include css/indentation.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-semicolon">
+    <div class="col">
+        <h3>分号</h3>
+        <p>每个属性声明末尾都要加分号。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/semicolon.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-space">
+    <div class="col">
+        <h3>空格</h3>
+        <p>以下几种情况不需要空格：</p>
+        <ul>
+            <li>属性名后</li>
+            <li>多个规则的分隔符','前</li>
+            <li><code>!important</code> '!'后</li>
+            <li>属性值中'('后和')'前</li>
+            <li>行末不要有多余的空格</li>
+        </ul>
+        <p>以下几种情况需要空格：</p>
+        <ul>
+            <li>属性值前</li>
+            <li>选择器'>', '+', '~'前后</li>
+            <li>'{'前</li>
+            <li><code>!important</code> '!'前</li>
+            <li><code>@else</code> 前后</li>
+            <li>属性值中的','后</li>
+            <li>注释'/*'后和'*/'前</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/space.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-blank-line">
+    <div class="col">
+        <h3>空行</h3>
+        <p>以下几种情况需要空行：</p>
+        <ul>
+            <li>文件最后保留一个空行</li>
+            <li>'}'后最好跟一个空行，包括scss中嵌套的规则</li>
+            <li>属性之间需要适当的空行，具体见<a href="#css-declaration-order">属性声明顺序</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/blank_line.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-new-line">
+    <div class="col">
+        <h3>换行</h3>
+        <p>以下几种情况不需要换行：</p>
+        <ul>
+            <li>'{'前</li>
+        </ul>
+        <p>以下几种情况需要换行：</p>
+        <ul>
+            <li>'{'后和'}'前</li>
+            <li>每个属性独占一行</li>
+            <li>多个规则的分隔符','后</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/new_line.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-comments">
+    <div class="col">
+        <h3>注释</h3>
+        <p>注释统一用'/* */'（scss中也不要用'//'），具体参照右边的写法；</p>
+        <p>缩进与下一行代码保持一致；</p>
+        <p>可位于一个代码行的末尾，与代码间隔一个空格。</li>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/comments.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-quote-marks">
+    <div class="col">
+        <h3>引号</h3>
+        <p>最外层统一使用双引号；</p>
+        <p>url的内容要用引号；</p>
+        <p>属性选择器中的属性值需要引号。</p>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/quote_marks.css %}{% endhighlight %}
+    </div>
+</div>
+
+<div class="section" id="css-naming-rule">
+    <div class="col">
+        <h3>命名</h3>
+        <ul>
+            <li>类名使用小写字母，以中划线分隔</li>
+            <li>id采用驼峰式命名</li>
+            <li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
+        </ul>
+    </div>
+    <div class="col">
+        {% highlight css %}{% include css/naming.css %}{% endhighlight %}
     </div>
 </div>
 
 <div class="section" id="css-declaration-order">
     <div class="col">
-        <h3>声明顺序</h3>
-        <p>相关的属性声明应该以下面的顺序分组处理：</p>
-        <ol>
-            <li>Positioning</li>
-            <li>Box model 盒模型</li>
-            <li>Typographic 排版</li>
-            <li>Visual 外观</li>
-        </ol>
-        <p>Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。盒模型紧跟其后，因为他决定了一个组件的大小和位置。</p>
-        <p>其他属性只在组件 <em>内部</em> 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。</p>
-        <p>关于完整的属性以及他们的顺序，请参考 <a href="http://twitter.github.com/recess">Recess</a>。</p>
+        <h3>属性声明顺序</h3>
+        <p>相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。</p>
     </div>
     <div class="col">
         {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
@@ -47,159 +132,87 @@
     </div>
 </div>
 
-<div class="section" id="css-import">
-  <div class="col">
-    <h3>Don't use <code>@import</code></h3>
-    <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
-    <ul>
-      <li>Use multiple <code>&lt;link&gt;</code> elements</li>
-      <li>Compile your CSS with a preprocessor like Sass or Less into a single file</li>
-      <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
-    </ul>
-    <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
-  </div>
-  <div class="col">
-    {% highlight html %}{% include css/import.html %}{% endhighlight %}
-  </div>
-</div>
-
-<div class="section" id="css-media-queries">
+<div class="section" id="css-color">
     <div class="col">
-        <h3>媒体查询位置</h3>
-        <p>尽量将媒体查询的位置靠近他们相关的规则。不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部。这样做只会让大家以后更容易忘记他们。这里是一个典型的案例。</p>
+        <h3>颜色</h3>
+        <p>颜色16进制用小写字母；</p>
+        <p>颜色16进制尽量用简写。</p>
     </div>
     <div class="col">
-        {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
-    </div>
-</div>
-
-<div class="section" id="css-prefixed-properties">
-    <div class="col">
-        <h3>前缀属性</h3>
-        <p>当使用厂商前缀属性时，通过缩进使取值垂直对齐以便多行编辑。</p>
-        <p>在 Textmate 中，使用 <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A)。 在 Sublime Text 2 中， 使用 <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) 和 <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;)。</p>
-    </div>
-    <div class="col">
-        {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
-    </div>
-</div>
-
-<div class="section" id="css-single-declarations">
-    <div class="col">
-        <h3>单条声明的声明块</h3>
-        <p>在一个声明块中<strong>只包含一条声明</strong>的情况下，为了易读性和快速编辑可以考虑移除其中的换行。所有包含多条声明的声明块应该分为多行。</p>
-        <p>这样做的关键因素是错误检测 - 例如，一个 CSS 验证程序显示你在 183 行有一个语法错误,如果是一个单条声明的行，那就是他了。在多个声明的情况下，你必须为哪里出错了费下脑子。</p>
-    </div>
-    <div class="col">
-        {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
+        {% highlight css %}{% include css/color.css %}{% endhighlight %}
     </div>
 </div>
 
 <div class="section" id="css-shorthand">
     <div class="col">
         <h3>属性简写</h3>
-        <p>坚持限制属性取值简写的使用，属性简写需要你必须显式设置所有取值。常见的属性简写滥用包括:</p>
+        <p>属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；</p>
+        <p><code>margin</code> 和 <code>padding</code> 相反，需要使用简写；</p>
+        <p>常见的属性简写包括：</p>
         <ul>
-            <li><code>padding</code></li>
-            <li><code>margin</code></li>
             <li><code>font</code></li>
             <li><code>background</code></li>
-            <li><code>border</code></li>
-            <li><code>border-radius</code></li>
+            <li><code>transition</code></li>
+            <li><code>animation</code></li>
         </ul>
-        <p>大多数情况下，我们并不需要设置属性简写中包含的所有值。例如，HTML 头部只设置上下的 margin，所以如果需要，只设置这两个值。过度使用属性简写往往会导致更混乱的代码，其中包含不必要的重写和意想不到的副作用。</p>
-        <p>Mozilla Developer Network 有一篇对不熟悉属性简写及其行为的人来说很棒的关于 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> 的文章。</p>
     </div>
     <div class="col">
         {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
     </div>
 </div>
 
-<div class="section" id="css-nesting">
+<div class="section" id="css-media-queries">
     <div class="col">
-        <h3>Less 和 Sass 中的嵌套</h3>
-        <p>避免不必要的嵌套。可以进行嵌套，不意味着你应该这样做。只有在需要给父元素增加样式并且同时存在多个子元素时才需要考虑嵌套。</p>
+        <h3>媒体查询</h3>
+        <p>尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。</p>
     </div>
     <div class="col">
-        {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
-    </div>
-</div>
-
-<div class="section" id="css-comments">
-    <div class="col">
-        <h3>代码注释</h3>
-        <p>代码是由人来编写和维护的。保证你的代码是描述性的，包含好的注释，并且容易被他人理解。好的代码注释传达上下文和目标。不要简单地重申组件或者 class 名称。</p>
-        <p>Be sure to write in complete sentences or larger comments and succinct phrases for general notes.</p>
-    </div>
-    <div class="col">
-        {% highlight css %}{% include css/comments.css %}{% endhighlight %}
+        {% highlight css %}{% include css/media_queries.css %}{% endhighlight %}
     </div>
 </div>
 
-<div class="section" id="css-classes">
+<div class="section" id="css-scss">
     <div class="col">
-        <h3>Class 命名</h3>
-        <ul>
-            <li>保持 Class 命名为全小写，可以使用短划线（不要使用下划线和 camelCase 命名）。短划线应该作为相关类的自然间断。(例如，<code>.btn</code> 和 <code>.btn-danger</code>)。</li>
-            <li>避免过度使用简写。<code>.btn</code> 可以很好地描述 <em>button</em>，但是 <code>.s</code> 不能代表任何元素。</li>
-            <li>Class 的命名应该尽量短，也要尽量明确。</li>
-            <li>使用有意义的名称；使用结构化或者作用目标相关，而不是抽象的名称。</li>
-            <li>命名时使用最近的父节点或者父 class 作为前缀。</li>
-            <li>使用 <code>.js-*</code> classes 来表示行为(相对于样式)，但是不要在 CSS 中包含这些 classes。</li>
-        </ul>
+        <h3>SCSS相关</h3>
+        <p>提交的代码中不要有 <code>@debug</code>；</p>
+        <div>
+            <p>声明顺序：</p>
+            <ul>
+                <li><code>@extend</code></li>
+                <li>不包含 <code>@content</code> 的 <code>@include</code></li>
+                <li>包含 <code>@content</code> 的 <code>@include</code></li>
+                <li>自身属性</li>
+                <li>嵌套规则</li>
+            </ul>
+        </div>
+        <p><code>@import</code> 引入的文件不需要开头的'_'和结尾的'.scss'；</p>
+        <p>嵌套最多不能超过5层；</p>
+        <p><code>@extend</code> 中使用placeholder选择器；</p>
+        <p>去掉不必要的父级引用符号'&'。</p>
     </div>
     <div class="col">
-        {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
-    </div>
-</div>
-
-<div class="section" id="css-selectors">
-    <div class="col">
-        <h3>选择器</h3>
-        <ul>
-            <li>使用 classes 而不是通用元素标签来优化渲染性能。</li>
-            <li>避免在经常出现的组件中使用一些属性选择器 (例如，<code>[class^="..."]</code>)。浏览器性能会受到这些情况的影响。</li>
-            <li>减少选择器的长度，每个组合选择器选择器的条目应该尽量控制在 3 个以内。</li>
-            <li><strong>只</strong>在必要的情况下使用后代选择器 (例如，没有使用带前缀 classes 的情况).</li>
-        </ul>
-        <p>扩展阅读:</p>
-        <ul>
-            <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
-            <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
-        </ul>
-    </div>
-    <div class="col">
-        {% highlight css %}{% include css/selectors.css %}{% endhighlight %}
+        {% highlight css %}{% include css/scss.css %}{% endhighlight %}
     </div>
 </div>
 
-<div class="section" id="css-organization">
+<div class="section" id="css-miscellaneous">
     <div class="col">
-        <h3>代码组织</h3>
-        <ul>
-            <li>以组件为单位组织代码。</li>
-            <li>制定一个一致的注释层级结构。</li>
-            <li>使用一致的空白来分割代码块，这样做在查看大的文档时更有优势。</li>
-            <li>当使用多个 CSS 文件时，通过组件而不是页面来区分他们。页面会被重新排列，而组件移动就可以了。</li>
-        </ul>
+        <h3>杂项</h3>
+        <p>不允许有空的规则；</p>
+        <p>元素选择器用小写字母；</p>
+        <p>去掉小数点前面的0；</p>
+        <p>去掉数字中不必要的小数点和末尾的0；</p>
+        <p>属性值'0'后面不要加单位；</p>
+        <p>同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；</p>
+        <p>无前缀的标准属性应该写在有前缀的属性后面；</p>
+        <p>不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；</p>
+        <p>不要在一个文件里出现两个相同的规则；</p>
+        <p>用 <code>border: 0;</code> 代替 <code>border: none;</code>；</p>
+        <p>选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；</p>
+        <p>发布的代码中不要有 <code>@import</code>；</p>
+        <p>尽量少用'*'选择器。</p>
     </div>
     <div class="col">
-        {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
-    </div>
-</div>
-
-<div class="section" id="css-editor-prefs">
-    <div class="col">
-        <h3>编辑器配置</h3>
-        <p>根据以下的设置来配置你的编辑器，来避免常见的代码不一致和丑陋的 diffs。</p>
-        <ul>
-            <li>使用四个空格的 soft-tabs。</li>
-            <li>在保存时删除尾部的空白字符。</li>
-            <li>在保存时删除尾部的空白字符。 <a href="http://programmers.stackexchange.com/questions/121555/why-is-trailing-whitespace-a-big-deal" target="_blank">为什么这么做？</a></li>
-            <li>设置文件编码为 UTF-8。</li>
-            <li>在文件结尾添加一个空白行。</li>
-            <li>在文件结尾添加一个空白行。<a href="http://www.zhihu.com/question/20018991" target="_blank">为什么这么做？</a></li>
-        </ul>
-        <p>参照文档，将这些设置应用到项目的 <code>.editorconfig</code> 文件。 例如，<a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">Bootstrap 中的 <code>.editorconfig</code> 文件</a>。 通过 <a href="http://editorconfig.org">关于 EditorConfig</a> 了解更多内容。</p>
+        {% highlight css %}{% include css/miscellaneous.css %}{% endhighlight %}
     </div>
 </div>

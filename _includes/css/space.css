@@ -1,0 +1,57 @@
+/* not good */
+.element {
+    color :red! important;
+    background-color: rgba(0,0,0,.5);
+}
+
+/* good */
+.element {
+    color: red !important;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* not good */
+.element ,
+.dialog{
+    ...
+}
+
+/* good */
+.element,
+.dialog {
+
+}
+
+/* not good */
+.element>.dialog{
+    ...
+}
+
+/* good */
+.element > .dialog{
+    ...
+}
+
+/* not good */
+.element{
+    ...
+}
+
+/* good */
+.element {
+    ...
+}
+
+/* not good */
+@if{
+    ...
+}@else{
+    ...
+}
+
+/* good */
+@if {
+    ...
+} @else {
+    ...
+}

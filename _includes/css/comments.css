@@ -1,11 +1,18 @@
-/* Bad example */
 /* Modal header */
 .modal-header {
     ...
 }
 
-/* Good example */
-/* Wrapping element for .modal-title and .modal-close */
+/*
+ * Modal header
+ */
 .modal-header {
     ...
+}
+
+.modal-header {
+    /* 50px */
+    width: 50px;
+
+    color: red; /* color red */
 }

@@ -1,0 +1,78 @@
+/* not good */
+.element {
+}
+
+/* not good */
+LI {
+    ...
+}
+
+/* good */
+li {
+    ...
+}
+
+/* not good */
+.element {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* good */
+.element {
+    color: rgba(0, 0, 0, .5);
+}
+
+/* not good */
+.element {
+    width: 50.0px;
+}
+
+/* good */
+.element {
+    width: 50px;
+}
+
+/* not good */
+.element {
+    width: 0px;
+}
+
+/* good */
+.element {
+    width: 0;
+}
+
+/* not good */
+.element {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    background: linear-gradient(to bottom, #fff 0, #eee 100%);
+    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+    background: -moz-linear-gradient(top, #fff 0, #eee 100%);
+}
+
+/* good */
+.element {
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+
+    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
+    background:    -moz-linear-gradient(top, #fff 0, #eee 100%);
+    background:         linear-gradient(to bottom, #fff 0, #eee 100%);
+}
+
+/* not good */
+.element {
+    color: rgb(0, 0, 0);
+    width: 50px;
+    color: rgba(0, 0, 0, .5);
+}
+
+/* good */
+.element {
+    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, .5);
+}

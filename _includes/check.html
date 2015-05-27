@@ -12,6 +12,13 @@
                     <li>jscs <code>npm install jscs -g</code></li>
                     <li>jshint <code>npm install jshint -g</code></li>
                     <li>csscomb <code>npm install csscomb -g</code></li>
+                    <li>csslint <code>npm install csslint -g</code></li>
+                </ul>
+            </li>
+            <li>
+                <p>安装gem包</p>
+                <ul>
+                    <li>scss-lint <code>gem install scss_lint</code></li>
                 </ul>
             </li>
             <li>
@@ -32,6 +39,8 @@
                             <li><code>SublimeLinter</code></li>
                             <li><code>SublimeLinter-jscs</code></li>
                             <li><code>SublimeLinter-jshint</code></li>
+                            <li><code>SublimeLinter-csslint</code></li>
+                            <li><code>SublimeLinter-contrib-scss-lint</code></li>
                             <li><code>JSFormat</code></li>
                             <li><code>CSScomb</code></li>
                         </ul>
@@ -49,6 +58,8 @@
                         <p>注意：全局变量需要手动加到配置文件的globals属性里，例：</p>
                         {% highlight json %}{% include check/grunt_jscs_globals.json %}{% endhighlight %}
                     </li>
+                    <li><code>CSSLint</code> <a href=".csslintrc" download=".csslintrc">配置文件</a></li>
+                    <li><code>SCSS-Lint</code> <a href=".scss-lint.yml" download=".scss-lint.yml">配置文件</a></li>
                 </ul>
             </li>
             <li>
@@ -70,15 +81,14 @@
                         <p>右键->SublimeLinter->Lint Mode，有4种检查模式，建议选择 <code>Load/save</code></p>
                         <p>右键->SublimeLinter->Mark Style，建议选择 <code>Outline</code></p>
                         <p>右键->SublimeLinter->Choose Gutter Theme，建议选择 <code>Blueberry-round</code></p>
-                        <p>右键->SublimeLinter->Show Errors on Save</p>
-                        <p>右键->SublimeLinter->Open User Settings，将linter里面jscs的args改成 <code>["--verbose"]</code></p>
+                        <p>右键->SublimeLinter->Open User Settings，将linter里面jscs的args改成 <code>["--verbose"]</code>，将linter里面csslint的ignore改成 <code>"box-model,adjoining-classes,box-sizing,compatible-vendor-prefixes,gradients,text-indent,fallback-colors,star-property-hack,underscore-property-hack,bulletproof-font-face,font-faces,import,regex-selectors,universal-selector,unqualified-attributes,overqualified-elements,duplicate-background-images,floats,font-sizes,ids,important,outline-none,qualified-headings,unique-headings"</code></p>
                         <p>当光标处于有错误的代码行时，详细的错误信息会显示在下面的状态栏中</p>
                         <p>右键->SublimeLinter可以看到所有的快捷键，其中 <code>ctrl+k, a</code> 可以列出所有错误</p>
                     </li>
                     <li>
                         <p><code>CSScomb</code></p>
                         <p>Preferences->Package Settings->CSScomb->Setting-User，下载<a href="csscomb_setting_user.json" download="csscomb_setting_user.json">配置文件</a>覆盖</p>
-                        <p>配置好后格式化的默认快捷键是 <code>ctrl+alt+c</code></p>
+                        <p>配置好后格式化的默认快捷键是 <code>ctrl+shift+c</code></p>
                     </li>
                 </ul>
             </li>
@@ -95,6 +105,8 @@
                 <ul>
                     <li>jscs <code>npm install grunt-jscs --save-dev</code></li>
                     <li>jshint <code>npm install grunt-contrib-jshint --save-dev</code></li>
+                    <li>csslint <code>npm install grunt-contrib-csslint --save-dev</code></li>
+                    <li>scss-lint <code>npm install grunt-scss-lint --save-dev</code></li>
                 </ul>
             </li>
             <li>
@@ -107,6 +119,14 @@
                     <li>
                         <code>JSHint</code>
                         {% highlight javascript %}{% include check/grunt_jshint.js %}{% endhighlight %}
+                    </li>
+                    <li>
+                        <code>CSSLint</code>
+                        {% highlight javascript %}{% include check/grunt_csslint.js %}{% endhighlight %}
+                    </li>
+                    <li>
+                        <code>SCSS-Lint</code>
+                        {% highlight javascript %}{% include check/grunt_scsslint.js %}{% endhighlight %}
                     </li>
                 </ul>
             </li>

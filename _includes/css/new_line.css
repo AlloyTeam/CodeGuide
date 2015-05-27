@@ -1,0 +1,20 @@
+/* not good */
+.element
+{color: red; background-color: black;}
+
+/* good */
+.element {
+    color: red;
+    background-color: black;
+}
+
+/* not good */
+.element, .dialog {
+    ...
+}
+
+/* good */
+.element,
+.dialog {
+    ...
+}
