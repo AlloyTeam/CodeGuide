@@ -184,7 +184,7 @@
 <div class="section" id="js-variable-declaration">
     <div class="col">
         <h3>变量声明</h3>
-        <p>一个函数作用域中所有的变量声明提到函数首部（包括for语句中经常声明的i, j），用一个var声明。</p>
+        <p>一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。</p>
     </div>
     <div class="col">
         {% highlight javascript %}{% include javascripts/variable_declaration.js %}{% endhighlight %}
