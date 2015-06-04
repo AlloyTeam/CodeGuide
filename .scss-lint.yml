@@ -21,7 +21,7 @@ linters:
     enabled: false
 
   Comment:
-    enabled: true
+    enabled: false
 
   DebugStatement:
     enabled: true
@@ -37,7 +37,7 @@ linters:
     style: same_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
-    enabled: true
+    enabled: false
     ignore_single_line_blocks: false
 
   EmptyRule:
@@ -70,7 +70,7 @@ linters:
     filename_extension: false
 
   Indentation:
-    enabled: true
+    enabled: false
     allow_non_nested_indentation: false
     character: space # or 'tab'
     width: 4
@@ -89,7 +89,7 @@ linters:
     convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
-    enabled: true
+    enabled: false
     max_depth: 5
 
   PlaceholderInExtend:
@@ -130,8 +130,8 @@ linters:
     allow_element_with_id: false
 
   SelectorDepth:
-    enabled: true
-    max_depth: 4
+    enabled: false
+    max_depth: 5
 
   SelectorFormat:
     enabled: true
@@ -154,7 +154,7 @@ linters:
 
   SpaceAfterPropertyColon:
     enabled: true
-    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+    style: at_least_one_space # 'one_space', or 'no_space', or 'aligned'
 
   SpaceAfterPropertyName:
     enabled: true
